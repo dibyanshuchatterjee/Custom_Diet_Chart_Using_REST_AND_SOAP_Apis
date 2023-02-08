@@ -1,0 +1,78 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" type="text/css" href="../static/index.css">
+	</head>
+
+	<body>
+
+        <form class="grid" action="/result" method="POST">
+            {% if healthy_snack %}
+            <center>
+              <h3 style="color: blue;" class="let_space">The choices of healthy snacks are: {{healthy_snack}}</h3>
+            </center>
+          {% endif %}
+            {% if healthy_snack_least_calories %}
+            <center>
+              <h3 style="color: blue;" class="let_space">Least calory healthy snack from the given list is: {{healthy_snack_least_calories}}</h3>
+            </center>
+          {% endif %}
+
+            {% if healthy_snack_recepie %}
+            <center>
+              <h3 style="color: blue;" class="let_space">Least calory healthy snack recepie from the list is: {{healthy_snack_recepie}}</h3>
+            </center>
+
+          {% endif %}
+
+          {% if diet_chart %}
+            <center>
+              <h3 style="color: blue;" class="let_space">Here is your diet chart: {{diet_chart}}</h3>
+            </center>
+
+          {% endif %}
+            {% if diet_chart_location %}
+            <center>
+              <h3 style="color: blue;" class="let_space">Your diet chart is saved at : {{diet_chart_location}}</h3>
+            </center>
+          {% endif %}
+
+          <label for="Weight">Enter you weight:</label>
+          <input type="text" id="Weight" name="Weight">
+
+            <label for="Weight_Units">Enter you weight's units, for example pounds or kgs only:</label>
+          <input type="text" id="Weight_Units" name="Weight_Units">
+
+            <label for="height">Enter you height:</label>
+          <input type="text" id="height" name="height">
+
+            <label for="height_unit">Enter you height's unit, for example cms or feet only.:</label>
+          <input type="text" id="height_unit" name="height_unit">
+
+            <label for="sex">Enter your sex, for example male or female only(DO NOT TYPE MAN OR WOMAN):</label>
+          <input type="text" id="sex" name="sex">
+
+          <label for="age">Enter your age :</label>
+          <input type="number" id="age" name="age">
+
+            <label for="goal">Enter your goal, for example, enter only loose or gain:</label>
+          <input type="text" id="goal" name="goal">
+
+            <label for="activity">Enter your activity level on the scale of 1 to 3. 1 being inactive and 3 being very active:</label>
+          <input type="number" id="activity" name="activity">
+
+            <label for="choice_of_cuisine">Enter your choice of cuisine, for example, Indian, American, Mexican etc:</label>
+          <input type="text" id="choice_of_cuisine" name="choice_of_cuisine">
+
+            <label for="preffered_number_of_meals">Enter your preferred number of meals for a day:</label>
+          <input type="text" id="preffered_number_of_meals" name="preffered_number_of_meals">
+          <center><input class="file_submit" type="Submit"></center>
+        </form>
+        <br>
+        <br>
+        <br>
+
+    </body>
+
+</html>
